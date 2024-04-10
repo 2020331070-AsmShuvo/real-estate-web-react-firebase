@@ -42,8 +42,8 @@ const Navbar = () => {
             <img src={logo} className="w-10 md:w-16 ml-8" alt="" />
             <Link to="/" className="btn btn-ghost">
               <div className="flex flex-col justify-center items-start">
-              <p className="text-white text-sm md:text-xl">majestic </p>
-              <p className=" text-sm md:text-sm text-gray-400">mansions</p>
+              <p className="text-white text-sm md:text-xl jul"><span className="text-amber-600">m</span>ajestic </p>
+              <p className=" text-sm md:text-sm text-gray-400 jul"><span className="text-amber-600">m</span>ansions</p>
               </div>
             </Link>
           </div>
