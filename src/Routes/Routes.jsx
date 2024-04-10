@@ -9,10 +9,12 @@ const router = createBrowserRouter([
     {
       path: "/",
       element: <Root/>,
+      errorElement: <div>ei page ti pawa jacche na vrata</div>,
       children: [
         {
             path: "/",
-            element: <Home/>
+            element: <Home/>,
+            loader: ()=> fetch('/estates.json')
         },
         {
             path: "/login",
