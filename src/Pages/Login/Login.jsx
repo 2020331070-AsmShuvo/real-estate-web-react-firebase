@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import loginbg from "../../../public/loginbg.jpg";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
 const Login = () => {
+
+  const {signIn} = useContext(AuthContext);
+
+  const handleLogin = e =>{
+    e.preventDefault();
+  }
+
   return (
     <div>
        
@@ -18,7 +26,9 @@ const Login = () => {
         <h1 className=" text-4xl text-[#a6886d] -mt-36">Login Here</h1>
           <div className="card rounded-none shrink-0 md:w-1/2 bg-base-100">
             
-            <form className="card-body bg-gradient-to-r from-[#16100B] to-[#130C08]">
+            <form 
+            onSubmit={handleLogin}
+            className="card-body bg-gradient-to-r from-[#16100B] to-[#130C08]">
                 
               <div className="form-control">
                 <label className="label">
@@ -28,7 +38,7 @@ const Login = () => {
                   type="email"
                   placeholder="email"
                   className="input input-bordered bg-gray-600"
-                  
+                  name="email"
                   required
                 />
               </div>
@@ -40,7 +50,7 @@ const Login = () => {
                   type="password"
                   placeholder="password"
                   className="input input-bordered bg-gray-600 "
-                  
+                  name="password"
                   required
                 />
                 <label className="label">
