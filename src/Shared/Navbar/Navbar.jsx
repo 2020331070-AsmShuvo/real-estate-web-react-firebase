@@ -72,7 +72,9 @@ const Navbar = () => {
         </div>
         {user ? (
           <div className="navbar-end">
-            <p className="text-gray-500">{user.email}</p>
+            <p className="text-gray-500">
+              {user.email ? user.email : user.displayName}
+            </p>
             <div className="avatar">
               <div
                 className="w-12 mx-2 rounded-full"
