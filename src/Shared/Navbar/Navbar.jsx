@@ -4,6 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
+  console.log("user name: ", user.displayName);
 
   return (
     <div>

@@ -28,11 +28,11 @@ const Register = () => {
       return;
     }
 
-
     // create user
     createUser(email, password)
       .then((res) => {
         res.user.displayName = name;
+        res.user.photoURL = photo;
         console.log("Created User: ", res.user);
         alert("REGISTRATION SUCCESSFUL !");
       })
@@ -41,8 +41,10 @@ const Register = () => {
         alert(err.message);
         return;
       });
-      
-      
+  };
+
+  const handleLogin = () => {
+    googleLogin();
   };
 
   return (
@@ -63,34 +65,34 @@ const Register = () => {
               className="card-body bg-gradient-to-r from-[#101B2F] to-[#190606]"
             >
               <div className="flex flex-col md:flex-row justify-between">
-              <div className="form-control  md:w-full">
-                <label className="label">
-                  <span className="text-[#a6886d] font-semibold label-text">
-                    Name
-                  </span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="input input-bordered bg-gray-600"
-                  name="name"
-                  required
-                />
-              </div>
-              <div className="form-control w-full md:ml-2">
-                <label className="label">
-                  <span className="text-[#a6886d] font-semibold label-text">
-                    Email
-                  </span>
-                </label>
-                <input
-                  type="email"
-                  placeholder="email"
-                  className="input input-bordered bg-gray-600"
-                  name="email"
-                  required
-                />
-              </div>
+                <div className="form-control  md:w-full">
+                  <label className="label">
+                    <span className="text-[#a6886d] font-semibold label-text">
+                      Name
+                    </span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    className="input input-bordered bg-gray-600"
+                    name="name"
+                    required
+                  />
+                </div>
+                <div className="form-control w-full md:ml-2">
+                  <label className="label">
+                    <span className="text-[#a6886d] font-semibold label-text">
+                      Email
+                    </span>
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="email"
+                    className="input input-bordered bg-gray-600"
+                    name="email"
+                    required
+                  />
+                </div>
               </div>
               <div className="form-control">
                 <label className="label">
@@ -107,49 +109,48 @@ const Register = () => {
                 />
               </div>
               <div className="flex flex-col md:flex-row">
-              <div className="form-control w-full">
-                <label className="label">
-                  <span className="text-[#a6886d] font-semibold label-text">
-                    Password
-                  </span>
-                </label>
-                <input
-                  type="password"
-                  placeholder="password"
-                  className="input input-bordered bg-gray-600 "
-                  name="password"
-                  required
-                />
-              </div>
-              <div className="form-control w-full md:ml-2">
-                <label className="label">
-                  <span className="text-[#a6886d] font-semibold label-text">
-                    Confirm Password
-                  </span>
-                </label>
-                <input
-                  type="password"
-                  placeholder="Confirm password"
-                  className="input input-bordered bg-gray-600 "
-                  name="confirmPassword"
-                  required
-                />
-                
-              </div>
+                <div className="form-control w-full">
+                  <label className="label">
+                    <span className="text-[#a6886d] font-semibold label-text">
+                      Password
+                    </span>
+                  </label>
+                  <input
+                    type="password"
+                    placeholder="password"
+                    className="input input-bordered bg-gray-600 "
+                    name="password"
+                    required
+                  />
+                </div>
+                <div className="form-control w-full md:ml-2">
+                  <label className="label">
+                    <span className="text-[#a6886d] font-semibold label-text">
+                      Confirm Password
+                    </span>
+                  </label>
+                  <input
+                    type="password"
+                    placeholder="Confirm password"
+                    className="input input-bordered bg-gray-600 "
+                    name="confirmPassword"
+                    required
+                  />
+                </div>
               </div>
               <label className="label">
-                  <div>
-                    <span className="mr-2 text-gray-500">
-                      Already have an account?
-                    </span>
-                    <Link
-                      to="/login"
-                      className="text-info font-semibold label-text-alt link link-hover"
-                    >
-                      Login
-                    </Link>
-                  </div>
-                </label>
+                <div>
+                  <span className="mr-2 text-gray-500">
+                    Already have an account?
+                  </span>
+                  <Link
+                    to="/login"
+                    className="text-info font-semibold label-text-alt link link-hover"
+                  >
+                    Login
+                  </Link>
+                </div>
+              </label>
               <div className="form-control mt-6">
                 <button className=" border text-center py-2 font-semibold rounded-none text-[#a6886d] border-[#a6886d]  w-full">
                   Register
