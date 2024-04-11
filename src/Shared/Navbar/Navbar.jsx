@@ -2,9 +2,10 @@ import React, { useContext } from "react";
 import logo from "/logo.png";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  console.log("user name: ", user.displayName);
+  console.log("user name: ", user?.displayName);
 
   return (
     <div>
@@ -73,7 +74,10 @@ const Navbar = () => {
           <div className="navbar-end">
             <p className="text-gray-500">{user.email}</p>
             <div className="avatar">
-              <div className="w-12 mx-2 rounded-full" title={`${user.displayName}`}>
+              <div
+                className="w-12 mx-2 rounded-full"
+                title={`${user.displayName}`}
+              >
                 <img
                   src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
                   alt="user-avatar"
