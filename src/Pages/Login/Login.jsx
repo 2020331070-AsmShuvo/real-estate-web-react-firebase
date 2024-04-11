@@ -8,6 +8,21 @@ const Login = () => {
 
   const handleLogin = e =>{
     e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    const email = form.get('email')
+    const password = form.get('password')
+
+    signIn(email, password)
+    .then(res=>{
+      console.log("Loged in user: ",res.user);
+      alert("Login Successful!")
+    })
+    .catch(err=>{
+      console.log("ERROR IN LOGIN: ", err.message);
+      alert(err.message);
+      return;
+    })
+
   }
 
   return (

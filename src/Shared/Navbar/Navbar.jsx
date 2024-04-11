@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import logo from "/logo.png";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
   return (
     <div>
       <div className="navbar bg-[#212121] ">
@@ -42,8 +45,12 @@ const Navbar = () => {
             <img src={logo} className="w-10 md:w-16 ml-8" alt="" />
             <Link to="/" className="btn btn-ghost">
               <div className="flex flex-col justify-center items-start">
-              <p className="text-white text-sm md:text-xl jul"><span className="text-amber-600">m</span>ajestic </p>
-              <p className=" text-sm md:text-sm text-gray-400 jul"><span className="text-amber-600">m</span>ansions</p>
+                <p className="text-white text-sm md:text-xl jul">
+                  <span className="text-amber-600">m</span>ajestic{" "}
+                </p>
+                <p className=" text-sm md:text-sm text-gray-400 jul">
+                  <span className="text-amber-600">m</span>ansions
+                </p>
               </div>
             </Link>
           </div>
@@ -61,20 +68,40 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end gap-2">
-          <Link
-            to="/login"
-            className=" border text-center py-2 font-semibold rounded-none md:w-36 text-[#a6886d] border-[#a6886d] "
-          >
-            Login
-          </Link>
-          <Link
-            to="/register"
-            className=" border text-center py-2 font-semibold rounded-none md:w-36 text-[#a6886d] border-[#a6886d] "
-          >
-            Register
-          </Link>
-        </div>
+        {user ? (
+          <div className="navbar-end">
+            <p className="text-gray-500">{user.email}</p>
+            <div className="avatar">
+              <div className="w-12 mx-2 rounded-full" title={`${user.displayName}`}>
+                <img
+                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                  alt="user-avatar"
+                />
+              </div>
+            </div>
+            <button
+              onClick={logOut}
+              className=" border text-center py-2 font-semibold rounded-none md:w-36 text-[#a6886d] border-[#a6886d] "
+            >
+              Logout
+            </button>
+          </div>
+        ) : (
+          <div className="navbar-end gap-2">
+            <Link
+              to="/login"
+              className=" border text-center py-2 font-semibold rounded-none md:w-36 text-[#a6886d] border-[#a6886d] "
+            >
+              Login
+            </Link>
+            <Link
+              to="/register"
+              className=" border text-center py-2 font-semibold rounded-none md:w-36 text-[#a6886d] border-[#a6886d] "
+            >
+              Register
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

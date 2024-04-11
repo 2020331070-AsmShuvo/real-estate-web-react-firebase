@@ -32,13 +32,17 @@ const Register = () => {
     // create user
     createUser(email, password)
       .then((res) => {
-        console.log(res.user);
+        res.user.displayName = name;
+        console.log("Created User: ", res.user);
+        alert("REGISTRATION SUCCESSFUL !");
       })
       .catch((err) => {
         console.log("ERROR!!! ", err);
+        alert(err.message);
+        return;
       });
       
-      alert("REGISTRATION SUCCESSFUL !");
+      
   };
 
   return (
@@ -51,14 +55,15 @@ const Register = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="hero-content  flex-col w-full  ">
-          <h1 className=" text-4xl text-[#695747] -mt-36">Register Here</h1>
+        <div className="hero-content h-[1000px] md:h-[700px] flex-col md:w-full  ">
+          <h1 className=" text-2xl text-[#695747] -mt-36">Register Here</h1>
           <div className="card border border-gray-600 rounded-none shrink-0 md:w-1/2 bg-base-100">
             <form
               onSubmit={handleRegister}
               className="card-body bg-gradient-to-r from-[#101B2F] to-[#190606]"
             >
-              <div className="form-control">
+              <div className="flex flex-col md:flex-row justify-between">
+              <div className="form-control  md:w-full">
                 <label className="label">
                   <span className="text-[#a6886d] font-semibold label-text">
                     Name
@@ -72,7 +77,7 @@ const Register = () => {
                   required
                 />
               </div>
-              <div className="form-control">
+              <div className="form-control w-full md:ml-2">
                 <label className="label">
                   <span className="text-[#a6886d] font-semibold label-text">
                     Email
@@ -85,6 +90,7 @@ const Register = () => {
                   name="email"
                   required
                 />
+              </div>
               </div>
               <div className="form-control">
                 <label className="label">
@@ -100,7 +106,8 @@ const Register = () => {
                   required
                 />
               </div>
-              <div className="form-control">
+              <div className="flex flex-col md:flex-row">
+              <div className="form-control w-full">
                 <label className="label">
                   <span className="text-[#a6886d] font-semibold label-text">
                     Password
@@ -114,7 +121,7 @@ const Register = () => {
                   required
                 />
               </div>
-              <div className="form-control">
+              <div className="form-control w-full md:ml-2">
                 <label className="label">
                   <span className="text-[#a6886d] font-semibold label-text">
                     Confirm Password
@@ -127,7 +134,10 @@ const Register = () => {
                   name="confirmPassword"
                   required
                 />
-                <label className="label">
+                
+              </div>
+              </div>
+              <label className="label">
                   <div>
                     <span className="mr-2 text-gray-500">
                       Already have an account?
@@ -140,7 +150,6 @@ const Register = () => {
                     </Link>
                   </div>
                 </label>
-              </div>
               <div className="form-control mt-6">
                 <button className=" border text-center py-2 font-semibold rounded-none text-[#a6886d] border-[#a6886d]  w-full">
                   Register

@@ -13,3 +13,25 @@ body{
     font-family: "Philosopher", sans-serif;
 }
 
+.avatar {
+    position: relative;
+  }
+  
+  .avatar-name {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 2px 4px;
+    font-size: 12px;
+    border-radius: 4px;
+    opacity: 0; /* Initially hide the name */
+    transition: opacity 0.3s ease;
+  }
+  
+  .avatar:hover .avatar-name {
+    opacity: 1; /* Show the name on hover */
+  }
+  
