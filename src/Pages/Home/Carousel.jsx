@@ -11,7 +11,7 @@ import penthouse from "../../../public/penthouse.jpg";
 const Carousel = () => {
     return (
         <div>
-            <div className="carousel w-full h-[760px] ">
+            <div className="carousel w-full h-[640px] ">
         <div id="slide1" className="carousel-item relative w-full">
           <img src={banner} className="w-full" />
           <div className="banner-overlay absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
@@ -38,10 +38,10 @@ const Carousel = () => {
           </div>
         </div>
         <div id="slide2" className="carousel-item relative w-full bg-[#171717]">
-          <img src={enhanced} className="z-10 ml-96 py-10" />
+          <img src={enhanced} className="z-10 py-10 ml-20" />
 
           <div className="text-blue absolute bottom-0 bg-black w-full h-96">
-            {" "}
+           
           </div>
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
             <a href="#slide1" className="btn btn-circle">
@@ -51,7 +51,7 @@ const Carousel = () => {
               ❯
             </a>
           </div>
-          <div className=" mr-20 z-10 flex items-center justify-center px-20">
+          <div className="mr-20 z-10 flex items-center justify-center px-20">
             <div className="space-y-4 mt-6">
               <h1 className="text-7xl text-gray-300 font-bold phil">
                 Enhanced Living

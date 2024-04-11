@@ -35,21 +35,21 @@ const EstateDetails = () => {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      className="min-h-screen flex justify-center items-center"
+      className="h-[700px] flex justify-center items-center"
     >
       <div className="w-1/2">
         <img src={image} className="w-[600px] bg-[#ffffff20] rounded-lg ml-4 h-[500px] p-4 " />
       </div>
-      <div className="w-1/2 mr-4 text-gray-100 space-y-4 bg-[#6c2c2c76] h-[500px] p-4 rounded-md">
+      <div className="w-1/2 mr-4 text-gray-50 space-y-3 bg-[#6c2c2c76] h-[500px] p-4 rounded-md">
         <p className="text-3xl font-bold text-gray-300 phil my-3 border-b">{estate_title}</p>
-        <p className="text-xl text-emerald-500 jul font-semibold">{segment_name}</p>
-        <p className="text-lg text-gray-200 ">{description}</p>
+        <p className="text-lg text-emerald-500 jul font-semibold">{segment_name}</p>
+        <p className="text-md text-gray-300 ">{description}</p>
         <p className="text-3xl text-blue-500">{price}</p>
         <p className="text-lg text-primary">For {status}</p>
-        <p className="text-sm text-amber-400">Area: {area}</p>
-        <p className="text-info">{location}</p>
-        <p className="">{
-            facilities.map(it=><p className="text-gray-400">{it}</p>)
+        <p className="text-lg text-amber-400">Area: {area}</p>
+        <p className="text-rose-300">{location}</p>
+        <p className="text-sm">{
+            facilities.map(it=><p className="text-info">* {it}</p>)
         }</p>
       </div>
     </div>
