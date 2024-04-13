@@ -41,6 +41,12 @@ const Navbar = () => {
               <li className="text-gray-600">
                 <NavLink to="/contact">Contact Us</NavLink>
               </li>
+              <li className="text-gray-600">
+                <NavLink to="/update">Update Profile</NavLink>
+              </li>
+              <li className="text-gray-600">
+                <NavLink to="/userprofile">User Profile</NavLink>
+              </li>
             </ul>
           </div>
           <div className="flex flex-col md:flex-row items-center justify-center ">
@@ -67,6 +73,12 @@ const Navbar = () => {
             </li>
             <li className="text-white">
               <NavLink to="/contact">Contact Us</NavLink>
+            </li>
+            <li className="text-white">
+              <NavLink to="/update">Update Profile</NavLink>
+            </li>
+            <li className="text-white">
+              <NavLink to="/userprofile">User Profile</NavLink>
             </li>
           </ul>
         </div>

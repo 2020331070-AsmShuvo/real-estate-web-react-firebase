@@ -2,9 +2,12 @@ import React, { useContext } from "react";
 import regbg from "../../../public/regbg.jpg";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import "firebase/auth";
+import { updateProfile } from "firebase/auth";
+import auth from "../../Firebase/Firebase.config";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, user } = useContext(AuthContext);
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -31,9 +34,21 @@ const Register = () => {
     // create user
     createUser(email, password)
       .then((res) => {
-        res.user.displayName = name;
-        res.user.photoURL = photo;
-        console.log("Created User: ", res.user);
+        const user = res.user;
+        // update displayname and photoURL
+        updateProfile(user, {
+          displayName: name,
+          photoURL: photo,
+        })
+          .then(() => {
+            console.log("profile updated");
+            console.log("Created User: ", user);
+          })
+          .catch((err) => {
+            console.log("error while adding name and photoURL : ", err.message);
+          });
+      })
+      .then(() => {
         alert("REGISTRATION SUCCESSFUL !");
       })
       .catch((err) => {
