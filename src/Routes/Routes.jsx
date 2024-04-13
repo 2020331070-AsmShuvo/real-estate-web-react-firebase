@@ -9,6 +9,7 @@ import EstateDetails from "../Pages/EstateDetails/EstateDetails";
 import PrivateRoutes from "./PrivateRoutes";
 import UpdateProfile from "../Pages/Login/Profile/UpdateProfile";
 import UserProfile from "../Pages/Login/Profile/UserProfile";
+import JobOffers from "../Pages/JobsOffers/JobOffers";
 
 const router = createBrowserRouter([
     {
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
         {
             path: "/register",
             element: <Register/>
+        },
+        {
+            path: "/jobs",
+            element: <JobOffers/>,
+            loader: ()=>fetch('jobs.json')
         },
         {
             path: "/update",

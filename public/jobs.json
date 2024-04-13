@@ -1,0 +1,83 @@
+[
+    {
+      "id": 1,
+      "job_title": "Senior Real Estate Agent",
+      "job_location": "New York City, NY",
+      "job_description": "Seeking an experienced real estate agent to handle high-end residential property transactions in the New York City area. Responsibilities include prospecting, client relationship management, property marketing, and negotiation.",
+      "salary": "$100,000 - $200,000",
+      "applied": 25
+    },
+    {
+      "id": 2,
+      "job_title": "Property Manager",
+      "job_location": "Los Angeles, CA",
+      "job_description": "Looking for a skilled property manager to oversee residential and commercial properties in the Los Angeles area. Duties include tenant relations, lease administration, property maintenance, and financial management.",
+      "salary": "$60,000 - $80,000",
+      "applied": 15
+    },
+    {
+      "id": 3,
+      "job_title": "Real Estate Developer",
+      "job_location": "Miami, FL",
+      "job_description": "Hiring a real estate developer to lead the planning, design, and construction of residential and commercial real estate projects in the Miami area. Must have experience in project management, budgeting, and regulatory compliance.",
+      "salary": "$90,000 - $120,000",
+      "applied": 10
+    },
+    {
+      "id": 4,
+      "job_title": "Real Estate Appraiser",
+      "job_location": "Chicago, IL",
+      "job_description": "Seeking a certified real estate appraiser to evaluate residential and commercial properties in the Chicago metropolitan area. Responsibilities include conducting property inspections, analyzing market data, and preparing appraisal reports.",
+      "salary": "$70,000 - $90,000",
+      "applied": 8
+    },
+    {
+      "id": 5,
+      "job_title": "Real Estate Attorney",
+      "job_location": "San Francisco, CA",
+      "job_description": "Looking for a skilled real estate attorney to provide legal counsel on real estate transactions, contracts, and disputes. Must have experience in property law, negotiation, and litigation.",
+      "salary": "$120,000 - $150,000",
+      "applied": 12
+    },
+    {
+      "id": 6,
+      "job_title": "Real Estate Marketing Manager",
+      "job_location": "Dallas, TX",
+      "job_description": "Hiring a marketing manager to develop and implement marketing strategies for real estate listings and brokerage services in the Dallas-Fort Worth area. Responsibilities include digital marketing, advertising, and branding.",
+      "salary": "$80,000 - $100,000",
+      "applied": 20
+    },
+    {
+      "id": 7,
+      "job_title": "Real Estate Broker",
+      "job_location": "Seattle, WA",
+      "job_description": "Seeking a licensed real estate broker to lead a team of agents and oversee residential and commercial property transactions in the Seattle area. Must have strong leadership skills and a proven track record of sales success.",
+      "salary": "$150,000 - $250,000",
+      "applied": 18
+    },
+    {
+      "id": 8,
+      "job_title": "Real Estate Financial Analyst",
+      "job_location": "Atlanta, GA",
+      "job_description": "Hiring a financial analyst to provide financial analysis and modeling support for real estate investment projects in the Atlanta metropolitan area. Responsibilities include cash flow analysis, valuation, and investment performance reporting.",
+      "salary": "$70,000 - $90,000",
+      "applied": 7
+    },
+    {
+      "id": 9,
+      "job_title": "Real Estate Photographer",
+      "job_location": "Denver, CO",
+      "job_description": "Looking for a skilled photographer to capture high-quality images and videos of residential and commercial properties in the Denver area. Must have experience in real estate photography and virtual tours.",
+      "salary": "$50,000 - $70,000",
+      "applied": 5
+    },
+    {
+      "id": 10,
+      "job_title": "Real Estate Investment Analyst",
+      "job_location": "Houston, TX",
+      "job_description": "Seeking an investment analyst to conduct financial analysis and due diligence for real estate investment opportunities in the Houston market. Responsibilities include market research, underwriting, and investment strategy development.",
+      "salary": "$80,000 - $100,000",
+      "applied": 11
+    }
+  ]
+  
