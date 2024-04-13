@@ -20,7 +20,7 @@ const Login = () => {
       })
       .catch((err) => {
         console.log("ERROR IN LOGIN: ", err.message);
-        alert(err.message);
+        alert("LOGIN FAILED. RECHECK EMAIL AND PASSWORD");
         return;
       });
   };

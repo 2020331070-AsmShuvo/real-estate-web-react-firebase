@@ -35,7 +35,7 @@ const router = createBrowserRouter([
         },
         {
             path: "/userprofile",
-            element: <UserProfile/>
+            element: <PrivateRoutes><UserProfile/></PrivateRoutes>
         },
         {
           path: "/estate/:id",

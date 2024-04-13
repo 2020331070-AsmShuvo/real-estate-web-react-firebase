@@ -1,11 +1,17 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import logo from "/logo.png";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  console.log("user name: ", user?.displayName);
+  const [curUser, setCurUser] = useState(user);
+  useEffect(()=>{
+    setCurUser(user);
+  },[user])
+  // console.log("user name: ", user?.displayName);
+  console.log(user);
+  console.log("User photo in navbar: ", user?.photoURL);
 
   return (
     <div>
@@ -44,9 +50,9 @@ const Navbar = () => {
               <li className="text-gray-600">
                 <NavLink to="/update">Update Profile</NavLink>
               </li>
-              <li className="text-gray-600">
+              {user && <li className="text-gray-600">
                 <NavLink to="/userprofile">User Profile</NavLink>
-              </li>
+              </li>}
             </ul>
           </div>
           <div className="flex flex-col md:flex-row items-center justify-center ">
@@ -77,9 +83,9 @@ const Navbar = () => {
             <li className="text-white">
               <NavLink to="/update">Update Profile</NavLink>
             </li>
-            <li className="text-white">
+            {user && <li className="text-white">
               <NavLink to="/userprofile">User Profile</NavLink>
-            </li>
+            </li>}
           </ul>
         </div>
         {user ? (
@@ -93,7 +99,7 @@ const Navbar = () => {
                 title={`${user.displayName}`}
               >
                 <img
-                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                  src={user?.photoURL}
                   alt="user-avatar"
                 />
               </div>

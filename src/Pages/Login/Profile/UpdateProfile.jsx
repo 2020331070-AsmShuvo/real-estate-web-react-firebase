@@ -68,9 +68,9 @@ const UpdateProfile = () => {
                 <p className="text-xljul border-b text-[#d1b5b5] py-2 px-4  ">
                   Name: {name}
                 </p>
-                <p className="text-[#d5a6a6] text-sm py-2 px-4 rounded-md my-2 bg-[#ffffff45] ">
-                  Email: {user?.email}
-                </p>
+                <div className="text-[#d5a6a6] text-sm  px-4 rounded-md my-2 bg-[#ffffff45] ">
+                   {user?.email ? <p className="py-2">Email : {user.email}</p>:""}
+                </div>
               </div>
             </div>
           </div>
