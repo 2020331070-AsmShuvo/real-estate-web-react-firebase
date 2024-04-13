@@ -5,7 +5,6 @@ import { BiSolidBadgeDollar } from "react-icons/bi";
 import { IoPeopleOutline } from "react-icons/io5";
 
 const Job = ({ job }) => {
-
   const { job_title, job_location, job_description, salary, applied } = job;
 
   return (
@@ -19,20 +18,27 @@ const Job = ({ job }) => {
               <h2 className="text-green-500">{job_location}</h2>
             </div>
           </div>
-          <p className="text-gray-500 font-sans ">
-            {job_description}
-          </p>
-          <hr className="my-4"/>
+          <p className="text-gray-500 font-sans ">{job_description}</p>
+          <hr className="my-4" />
           <div className="card-actions justify-between">
             <div className="flex gap-4">
               <div className="">
-                <div className="flex items-center font-semibold gap-2"><BiSolidBadgeDollar className="text-2xl text-success"/> {salary} <span className="font-light mr-4">/Mo</span></div>
+                <div className="flex items-center font-semibold gap-2">
+                  <BiSolidBadgeDollar className="text-2xl text-success" />{" "}
+                  {salary} <span className="font-light mr-4">/Mo</span>
+                </div>
               </div>
               <div>
-                <div className="flex items-center gap-2"><IoPeopleOutline  className="text-2xl text-success"/> <span className="font-semibold text-xl">{applied}</span> People Applied</div>
+                <div className="flex items-center gap-2">
+                  <IoPeopleOutline className="text-2xl text-success" />{" "}
+                  <span className="font-semibold text-xl">{applied}</span>{" "}
+                  People Applied
+                </div>
               </div>
             </div>
-            <button className="btn btn-success w-24 rounded-none text-white text-2xl"><FaArrowAltCircleRight /></button>
+            <button className="btn text-success btn-outline outline-none border-none text-3xl w-24 rounded-none ">
+              <FaArrowAltCircleRight />
+            </button>
           </div>
         </div>
       </div>

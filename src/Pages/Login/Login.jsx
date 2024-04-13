@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import loginbg from "../../../public/loginbg.jpg";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
@@ -6,6 +6,10 @@ import { FaGoogle, FaGithub } from "react-icons/fa";
 
 const Login = () => {
   const { signIn, googleLogin, githubLogin } = useContext(AuthContext);
+
+  useEffect(()=>{
+    document.title = "Majestic Mansion | Login"
+  },[]);
 
   const handleLogin = (e) => {
     e.preventDefault();

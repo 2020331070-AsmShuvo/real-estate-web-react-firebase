@@ -12,45 +12,60 @@ import UserProfile from "../Pages/Login/Profile/UserProfile";
 import JobOffers from "../Pages/JobsOffers/JobOffers";
 
 const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Root/>,
-      errorElement: <ErrorPage/>,
-      children: [
-        {
-            path: "/",
-            element: <Home/>,
-            loader: ()=> fetch('/estates.json')
-        },
-        {
-            path: "/login",
-            element: <Login/>
-        },
-        {
-            path: "/register",
-            element: <Register/>
-        },
-        {
-            path: "/jobs",
-            element: <JobOffers/>,
-            loader: ()=>fetch('jobs.json')
-        },
-        {
-            path: "/update",
-            element: <PrivateRoutes><UpdateProfile/></PrivateRoutes>
-        },
-        {
-            path: "/userprofile",
-            element: <PrivateRoutes><UserProfile/></PrivateRoutes>
-        },
-        {
-          path: "/estate/:id",
-          element: <PrivateRoutes><EstateDetails/></PrivateRoutes>,
-          loader: ()=>fetch('/estates.json')
-        }
-      ]
-    },
-  ]);
-
+  {
+    path: "/",
+    element: <Root />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+        loader: () => fetch("/estates.json"),
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
+      },
+      {
+        path: "/jobs",
+        element: (
+          <PrivateRoutes>
+            <JobOffers />
+          </PrivateRoutes>
+        ),
+        loader: () => fetch("jobs.json"),
+      },
+      {
+        path: "/update",
+        element: (
+          <PrivateRoutes>
+            <UpdateProfile />
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: "/userprofile",
+        element: (
+          <PrivateRoutes>
+            <UserProfile />
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: "/estate/:id",
+        element: (
+          <PrivateRoutes>
+            <EstateDetails />
+          </PrivateRoutes>
+        ),
+        loader: () => fetch("/estates.json"),
+      },
+    ],
+  },
+]);
 
 export default router;

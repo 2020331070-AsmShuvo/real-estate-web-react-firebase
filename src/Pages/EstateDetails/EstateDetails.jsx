@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams, useLoaderData } from "react-router-dom";
 
 const EstateDetails = () => {
@@ -14,6 +14,9 @@ const EstateDetails = () => {
       break;
     }
   }
+  useEffect(()=>{
+    document.title = "Majestic Mansion | Estate Details"
+  },[]);
   console.log("Estate with id: ", estate);
 
   const {
@@ -35,7 +38,7 @@ const EstateDetails = () => {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      className="h-[700px] flex justify-center items-center"
+      className="min-h-screen flex justify-center items-center"
     >
       <div className="w-1/2">
         <img src={image} className="w-[600px] bg-[#ffffff20] rounded-lg ml-4 h-[500px] p-4 " />

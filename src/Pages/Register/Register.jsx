@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import regbg from "../../../public/regbg.jpg";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
@@ -8,6 +8,10 @@ import auth from "../../Firebase/Firebase.config";
 
 const Register = () => {
   const { createUser, user } = useContext(AuthContext);
+
+  useEffect(()=>{
+    document.title = "Majestic Mansion | Register"
+  },[]);
 
   const handleRegister = (e) => {
     e.preventDefault();

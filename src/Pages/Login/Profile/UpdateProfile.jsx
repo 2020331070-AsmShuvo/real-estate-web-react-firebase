@@ -16,6 +16,10 @@ const UpdateProfile = () => {
     setPhoto(user?.photoURL || "");
   }, [user]);
 
+  useEffect(()=>{
+    document.title = "Majestic Mansion | Update Profile"
+  },[]);
+
   const updateName = (e) => {
     setUpdatedName(e.target.value);
   };
