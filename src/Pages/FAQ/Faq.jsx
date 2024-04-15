@@ -5,9 +5,9 @@ import { FaPersonCircleQuestion } from "react-icons/fa6";
 
 const Faq = () => {
   return (
-    <div className="min-h-screen">
+    <div className="h-[1200px]">
       <div className="my-10 space-y-2 w-1/3 mx-auto">
-        <div><FaPersonCircleQuestion className="mx-auto text-7xl my-4"/></div>
+        <div><FaPersonCircleQuestion className="mx-auto text-7xl my-4 animate__animated animate__jello"/></div>
         <div className="collapse collapse-arrow bg-base-200">
           <input type="radio" name="my-accordion-2" defaultChecked />
           <div className="collapse-title text-xl font-medium">
@@ -73,7 +73,6 @@ const Faq = () => {
           </div>
           <div className="collapse-content">
             <p>
-              {" "}
               Applying for a mortgage or financing can seem daunting, but our
               team is here to help. We work closely with trusted lenders and
               financial institutions to assist you in securing the financing you
@@ -84,16 +83,16 @@ const Faq = () => {
         </div>
       </div>
       {/* clients sat form */}
-      <div  className="text-center text-2xl font-semibold jul">What our clients say</div>
-        <hr className="mt-4 mb-10"/>
-      <div className="flex gap-4 w-2/3 mx-auto">
+      <div  className="text-center mt-20 text-2xl font-semibold jul">What our clients say</div>
+        <hr className="mt-4 mb-20"/>
+      <div className="flex gap-4 w-2/3 mx-auto"  data-aos="flip-up">
         <Review
           title="Love the sleek design and top-notch quality! Your products have elevated our workspace, making it both stylish and functional. Highly recommended!"
           clientName="Kie Haverts"
           designation="Sr. Consultant, Recruit"
         />
         <Review
-          title="Love the sleek design and top-notch quality! Your products have elevated our workspace, making it both stylish and functional. Highly recommended!"
+          title=" They were quick to respond with detailed information and available options. The property exceeded my expectations in terms of luxury and seclusion"
           clientName="Anirudh Dutt"
           designation="Marketing Manager, ITune"
         />

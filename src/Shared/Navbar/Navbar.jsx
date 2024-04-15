@@ -56,7 +56,7 @@ const Navbar = () => {
               )}
             </ul>
           </div>
-          <div className="flex flex-col md:flex-row items-center justify-center ">
+          <div className="flex flex-col md:flex-row items-center justify-center animate__animated animate__bounce ">
             <img src={logo} className="w-10 md:w-16 ml-8" alt="" />
             <Link to="/" className="btn btn-ghost">
               <div className="flex flex-col justify-center items-start">

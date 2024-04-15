@@ -65,14 +65,14 @@ const UpdateProfile = () => {
               <p className="text-gray-400 mb-8 border p-2 jul">USER PROFILE</p>
               <img
                 src={photo}
-                className="w-36 bg-gray-500 h-36 border-4  rounded-full mx-auto mb-4"
+                className="w-36 bg-gray-500 h-36 border-4  rounded-full mx-auto mb-4 animate__animated animate__flash"
                 alt="user-image"
               />
               <div className="">
-                <p className="text-xljul border-b text-[#d1b5b5] py-2 px-4  ">
+                <p className="text-xljul border-b text-[#d1b5b5] py-2 px-4  animate__animated animate__flash ">
                   Name: {name}
                 </p>
-                <div className="text-[#d5a6a6] text-sm  px-4 rounded-md my-2 bg-[#ffffff45] ">
+                <div className="text-[#d5a6a6] text-sm  px-4 rounded-md my-2 bg-[#ffffff45] animate__animated animate__flash">
                    {user?.email ? <p className="py-2">Email : {user.email}</p>:""}
                 </div>
               </div>

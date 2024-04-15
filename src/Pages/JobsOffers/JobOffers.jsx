@@ -8,7 +8,7 @@ const JobOffers = () => {
       },[]);
     const jobs =  useLoaderData();
     return (
-        <div className='min-h-screen'>
+        <div className='min-h-screen animate__animated animate__headShake'>
             {
                 jobs.map(job => <Job job={job}/>)
             }

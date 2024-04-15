@@ -32,13 +32,13 @@ const SwiperSlider = () => {
               </a>
             </div>
             <div className="absolute top-1/2 space-y-4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
-              <p className="jul text-lg text-center text-gray-300">
+              <p className="jul text-lg text-center text-gray-300 animate__animated animate__backInDown">
                 AGENCY AND CONTRACTOR
               </p>
-              <p className=" text-5xl text-center text-gray-300 font-extrabold">
+              <p className=" text-5xl text-center text-gray-300 font-extrabold  animate__animated animate__backInLeft">
                 Discover Your Dream Luxury Retreats
               </p>
-              <p className="text-sm text-center font-light">
+              <p className="text-sm text-center font-light animate__animated animate__backInRight">
                 Welcome to Luxe Haven: Your Gateway to Prestige and Exclusivity.
                 Explore Iconic Penthouses, Beachfront Retreats, and Opulent
                 Mansions, Redefining Luxury Living.
@@ -64,13 +64,13 @@ const SwiperSlider = () => {
             </div>
             <div className="mr-20 z-10 flex items-center justify-center px-20">
               <div className="space-y-4 mt-6">
-                <h1 className="text-7xl text-gray-300 font-bold phil">
+                <h1 className="text-7xl text-gray-300 font-bold phil animate__animated animate__bounce">
                   Enhanced Living
                 </h1>
-                <h3 className="text-2xl text-gray-500 jul">
+                <h3 className="text-2xl text-gray-500 jul animate__animated animate__bounce">
                   Experience with Reach
                 </h3>
-                <p className="text-gray-400">
+                <p className="text-gray-400 animate__animated animate__bounce">
                   Enhanced Living redefines luxury with unparalleled
                   sophistication and style, offering a lifestyle of opulence and
                   comfort. Our meticulously curated properties embody elegance

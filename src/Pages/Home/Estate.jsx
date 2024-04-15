@@ -19,7 +19,7 @@ const Estate = ({ estate }) => {
 
   return (
     <div className="p-2 m-2 mx-auto">
-      <div className="card glass card-compact w-[400px] h-[700px] bg-gray-100 shadow-[#a6886d] shadow-2xl">
+      <div className="card  glass card-compact w-[400px] h-[700px] bg-gray-100 shadow-[#a6886d] shadow-2xl" data-aos="zoom-in">
         <figure>
           <img src={image} className="p-6 w-full h-80" alt="card-images" />
         </figure>

@@ -14,9 +14,9 @@ const EstateDetails = () => {
       break;
     }
   }
-  useEffect(()=>{
-    document.title = "Majestic Mansion | Estate Details"
-  },[]);
+  useEffect(() => {
+    document.title = "Majestic Mansion | Estate Details";
+  }, []);
   console.log("Estate with id: ", estate);
 
   const {
@@ -33,6 +33,7 @@ const EstateDetails = () => {
 
   return (
     <div
+      
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url(${image})`,
         backgroundRepeat: "no-repeat",
@@ -41,19 +42,28 @@ const EstateDetails = () => {
       className="min-h-screen flex justify-center items-center"
     >
       <div className="w-1/2">
-        <img src={image} className="w-[600px] bg-[#ffffff20] rounded-lg ml-4 h-[500px] p-4 " />
+        <img
+          src={image}
+          className="w-[600px] bg-[#ffffff20] rounded-lg ml-4 h-[500px] p-4 "
+        />
       </div>
       <div className="w-1/2 mr-4 text-gray-50 space-y-3 bg-[#6c2c2c76] h-[500px] p-4 rounded-md">
-        <p className="text-3xl font-bold text-gray-300 phil my-3 border-b">{estate_title}</p>
-        <p className="text-lg text-emerald-500 jul font-semibold">{segment_name}</p>
+        <p className="text-3xl font-bold text-gray-300 phil my-3 border-b">
+          {estate_title}
+        </p>
+        <p className="text-lg text-emerald-500 jul font-semibold">
+          {segment_name}
+        </p>
         <p className="text-md text-gray-300 ">{description}</p>
         <p className="text-3xl text-blue-500">{price}</p>
         <p className="text-lg text-primary">For {status}</p>
         <p className="text-lg text-amber-400">Area: {area}</p>
         <p className="text-rose-300">{location}</p>
-        <p className="text-sm">{
-            facilities.map(it=><p className="text-info">* {it}</p>)
-        }</p>
+        <p className="text-sm">
+          {facilities.map((it) => (
+            <p className="text-info">* {it}</p>
+          ))}
+        </p>
       </div>
     </div>
   );

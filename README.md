@@ -12,3 +12,9 @@ Here also quoted some "Reviews" of our verified clients with high profiles.
    NOTE: A running captions is shown under the navigationbar to attract views for jobs offers.
 
 4. "User Profile" option shows some informations about user and "Update Profile" gives the chance to update some informations about the user
+
+### Used packages:
+
+Swiper slider
+Animate.css
+AOS Package

@@ -9,7 +9,7 @@ const Job = ({ job }) => {
 
   return (
     <div className="mx-auto">
-      <div className="card mx-auto my-8 md:w-[900px] border rounded-none">
+      <div  data-aos="zoom-in" className=" card mx-auto my-8 md:w-[900px] border rounded-none">
         <div className="card-body">
           <div className="flex items-center gap-4">
             <img src={joblogo} className="w-20" />
