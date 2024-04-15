@@ -1,8 +1,14 @@
-# React + Vite
+Webiste Name: Majestic Mansions
+Link: https://assignment9-realestates.web.app/
+1. This is a realestate commertial website. At the home page user can see a slider with various banners of our business realted posters.
+   And under that there is our estates section where viewer can view our various estates like appartments, buildings, plot, resorts, island etc .
+   All the estates have some details shown. A verfied viewer can view out properties by ckicking our "view property" option. There is some more details about each estate.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2. "FAQ" section where where user can find important and frequentl asked questions by our viewers and customers. It helps a new viewer to know about our website criterias an some more informations.
 
-Currently, two official plugins are available:
+Here also quoted some "Reviews" of our verified clients with high profiles.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+3. "Job offer" section for our verified views. They can get a good amount of jobs posts which are collected from our clients and linkups. A person can apply to those jobs an get beneiftedd by our website and it's full free for our varifie viewers.
+   NOTE: A running captions is shown under the navigationbar to attract views for jobs offers.
+
+4. "User Profile" option shows some informations about user and "Update Profile" gives the chance to update some informations about the user

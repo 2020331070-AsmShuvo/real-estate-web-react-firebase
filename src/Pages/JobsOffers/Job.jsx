@@ -25,7 +25,7 @@ const Job = ({ job }) => {
               <div className="">
                 <div className="flex items-center font-semibold gap-2">
                   <BiSolidBadgeDollar className="text-2xl text-success" />{" "}
-                  {salary} <span className="font-light mr-4">/Mo</span>
+                  {salary} <span className="font-light mr-4">/yr</span>
                 </div>
               </div>
               <div>
