@@ -1,17 +1,27 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import regbg from "../../../public/regbg.jpg";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import "firebase/auth";
 import { updateProfile } from "firebase/auth";
-import auth from "../../Firebase/Firebase.config";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 
 const Register = () => {
   const { createUser, user } = useContext(AuthContext);
+  const [passdata, setPassdata] = useState("");
+  const [showPass, setShowPass] = useState(false);
 
-  useEffect(()=>{
-    document.title = "Majestic Mansion | Register"
-  },[]);
+  const handleInput = (e) => {
+    setPassdata(e.target.value);
+  };
+
+  const handleShowPass = () => {
+    setShowPass(!showPass);
+  };
+
+  useEffect(() => {
+    document.title = "Majestic Mansion | Register";
+  }, []);
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -21,6 +31,7 @@ const Register = () => {
     const photo = form.get("photo");
     const password = form.get("password");
     const confirmPassword = form.get("confirmPassword");
+
     console.log(name, email, password, confirmPassword, photo);
     if (password.length < 6) {
       alert("Password should contain at least 6 character");
@@ -134,13 +145,24 @@ const Register = () => {
                       Password
                     </span>
                   </label>
-                  <input
-                    type="password"
-                    placeholder="password"
-                    className="input input-bordered bg-gray-600 "
-                    name="password"
-                    required
-                  />
+                  <div className="flex items-center relative">
+                    <input
+                      placeholder="password"
+                      className="input input-bordered w-full bg-gray-600 "
+                      name="password"
+                      value={passdata}
+                      onChange={handleInput}
+                      type={showPass ? "text" : "password"}
+                      required
+                    />
+                    <span className="text-grany-200 absolute right-4 borde text-gray-400">
+                      {showPass ? (
+                        <FaRegEyeSlash onClick={handleShowPass} />
+                      ) : (
+                        <FaRegEye onClick={handleShowPass} />
+                      )}
+                    </span>
+                  </div>
                 </div>
                 <div className="form-control w-full md:ml-2">
                   <label className="label">
@@ -148,13 +170,16 @@ const Register = () => {
                       Confirm Password
                     </span>
                   </label>
-                  <input
-                    type="password"
-                    placeholder="Confirm password"
-                    className="input input-bordered bg-gray-600 "
-                    name="confirmPassword"
-                    required
-                  />
+                  <div className="flex items-center">
+                    <input
+                      placeholder="Confirm password"
+                      className="input w-full input-bordered bg-gray-600 "
+                      name="confirmPassword"
+                      onChange={handleInput}
+                      type={showPass ? "text" : "password"}
+                      required
+                    />
+                  </div>
                 </div>
               </div>
               <label className="label">

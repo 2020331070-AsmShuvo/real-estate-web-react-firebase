@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
 import Carousel from "./Carousel";
 import Estate from "./Estate";
@@ -7,7 +7,9 @@ import Marquee from "react-fast-marquee";
 const Home = () => {
   const estates = useLoaderData();
   console.log(estates);
-
+  useEffect(() => {
+    document.title = "Majestic Mansion | Home";
+  }, []);
   return (
     <div>
       <Marquee className="bg-[#212121] text-white py-1 font-mono">
@@ -16,7 +18,7 @@ const Home = () => {
         industry!
       </Marquee>
       <Carousel />
-      
+
       <div className="pt-8  rounded-xl mx-12">
         <h1 className="text-3xl font-bold text-center text-gray-700 mb-2">
           Explore our properties

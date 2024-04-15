@@ -48,7 +48,7 @@ const UserProfile = () => {
 
   console.log("User in update profile: ", user);
   return (
-    <div className="min-h-screen bg-[#212121]">
+    <div className="min-h-screen bg-[#000000]">
       <div className=" shadow-2xl  bg-gradient-to-r from-[#371616] to-[#431d1de5] w-[500px] mx-auto text-center flex flex-col items-center justify-start">
         <div className="bg-gray-400 w-full">
           <div className="space-y-2">
