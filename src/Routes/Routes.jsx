@@ -10,6 +10,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import UpdateProfile from "../Pages/Login/Profile/UpdateProfile";
 import UserProfile from "../Pages/Login/Profile/UserProfile";
 import JobOffers from "../Pages/JobsOffers/JobOffers";
+import Faq from "../Pages/FAQ/Faq";
 
 const router = createBrowserRouter([
   {
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
         ),
         loader: () => fetch("/estates.json"),
       },
+      {
+        path: "/faq",
+        element: <Faq/>
+      }
     ],
   },
 ]);

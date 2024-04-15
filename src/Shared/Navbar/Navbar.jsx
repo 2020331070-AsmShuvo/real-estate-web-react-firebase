@@ -6,12 +6,11 @@ import { AuthContext } from "../../Providers/AuthProvider";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const [curUser, setCurUser] = useState(user);
-  useEffect(()=>{
+  useEffect(() => {
     setCurUser(user);
-  },[user])
-  // console.log("user name: ", user?.displayName);
-  console.log(user);
-  console.log("User photo in navbar: ", user?.photoURL);
+  }, [user]);
+  // console.log(user);
+  // console.log("User photo in navbar: ", user?.photoURL);
 
   return (
     <div>
@@ -42,7 +41,7 @@ const Navbar = () => {
                 <NavLink to="/">Home</NavLink>
               </li>
               <li className="text-gray-600">
-                <NavLink to="/services">Services</NavLink>
+                <NavLink to="/faq">FAQ</NavLink>
               </li>
               <li className="text-gray-600">
                 <NavLink to="/jobs">Job offers</NavLink>
@@ -50,9 +49,11 @@ const Navbar = () => {
               <li className="text-gray-600">
                 <NavLink to="/update">Update Profile</NavLink>
               </li>
-              {user && <li className="text-gray-600">
-                <NavLink to="/userprofile">User Profile</NavLink>
-              </li>}
+              {user && (
+                <li className="text-gray-600">
+                  <NavLink to="/userprofile">User Profile</NavLink>
+                </li>
+              )}
             </ul>
           </div>
           <div className="flex flex-col md:flex-row items-center justify-center ">
@@ -75,7 +76,7 @@ const Navbar = () => {
               <NavLink to="/">Home</NavLink>
             </li>
             <li className="text-white">
-              <NavLink to="/services">Services</NavLink>
+              <NavLink to="/faq">FAQ</NavLink>
             </li>
             <li className="text-white">
               <NavLink to="/jobs">Job Offers</NavLink>
@@ -83,9 +84,11 @@ const Navbar = () => {
             <li className="text-white">
               <NavLink to="/update">Update Profile</NavLink>
             </li>
-            {user && <li className="text-white">
-              <NavLink to="/userprofile">User Profile</NavLink>
-            </li>}
+            {user && (
+              <li className="text-white">
+                <NavLink to="/userprofile">User Profile</NavLink>
+              </li>
+            )}
           </ul>
         </div>
         {user ? (
@@ -98,10 +101,7 @@ const Navbar = () => {
                 className="w-12 mx-2 rounded-full"
                 title={`${user.displayName}`}
               >
-                <img
-                  src={user?.photoURL}
-                  alt="user-avatar"
-                />
+                <img src={user?.photoURL} alt="user-avatar" />
               </div>
             </div>
             <button

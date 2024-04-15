@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
-import Carousel from "./Carousel";
 import Estate from "./Estate";
 import Marquee from "react-fast-marquee";
+import SwiperSlider from "./SwiperSlider";
 
 const Home = () => {
   const estates = useLoaderData();
@@ -17,7 +17,7 @@ const Home = () => {
         agents. Log in now to explore your next career move in the real estate
         industry!
       </Marquee>
-      <Carousel />
+      <SwiperSlider/>
 
       <div className="pt-8  rounded-xl mx-12">
         <h1 className="text-3xl font-bold text-center text-gray-700 mb-2">
