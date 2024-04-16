@@ -58,9 +58,9 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="">
       <div
-        className="hero  h-[750px] "
+        className="hero min-h-screen h-[700px] "
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(${loginbg})`,
           backgroundSize: "cover",
@@ -138,13 +138,13 @@ const Login = () => {
               className="flex items-center justify-center gap-2 font-semibold  bg-gray-300 w-1/2 rounded-full px-2 py-1"
             >
               <FaGoogle />
-              <p>Login With Google</p>
+              <p className="hidden sm:block">Google Login</p>
             </button>
             <button 
             onClick={handleGithubLogin}
             className="flex items-center justify-center gap-2 font-semibold  bg-gray-50 w-1/2 rounded-full px-2 py-1">
               <FaGithub />
-              <p>Login With Github</p>
+              <p className="hidden sm:block">Github Login</p>
             </button>
           </div>
         </div>

@@ -96,7 +96,7 @@ const Register = () => {
               onSubmit={handleRegister}
               className="card-body bg-gradient-to-r from-[#101B2F] to-[#190606]"
             >
-              <div className="flex flex-col md:flex-row justify-between">
+              <div className="flex flex-col lg:flex-row justify-between">
                 <div className="form-control  md:w-full">
                   <label className="label">
                     <span className="text-[#a6886d] font-semibold label-text">
@@ -111,7 +111,7 @@ const Register = () => {
                     required
                   />
                 </div>
-                <div className="form-control w-full md:ml-2">
+                <div className="form-control w-full lg:ml-2">
                   <label className="label">
                     <span className="text-[#a6886d] font-semibold label-text">
                       Email

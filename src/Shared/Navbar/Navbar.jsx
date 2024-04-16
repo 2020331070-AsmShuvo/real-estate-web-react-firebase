@@ -92,7 +92,7 @@ const Navbar = () => {
           </ul>
         </div>
         {user ? (
-          <div className="navbar-end flex flex-col gap-2">
+          <div className="navbar-end flex flex-col md:flex-row gap-2">
             <p className="text-gray-500">
               {user.email ? user.email : user.displayName}
             </p>
