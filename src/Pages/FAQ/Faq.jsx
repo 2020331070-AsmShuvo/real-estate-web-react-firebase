@@ -5,9 +5,9 @@ import { FaPersonCircleQuestion } from "react-icons/fa6";
 
 const Faq = () => {
   return (
-    <div className="h-[1200px]">
-      <div className="my-10 space-y-2 w-1/3 mx-auto">
-        <div><FaPersonCircleQuestion className="mx-auto text-7xl my-4 animate__animated animate__jello"/></div>
+    <div className="lg:h-[1200px] px-2">
+      <div className="my-10 space-y-2 lg:w-1/3 mx-auto">
+        <div><FaPersonCircleQuestion className="mx-auto text-7xl my-4 lg:animate__animated lg:animate__jello"/></div>
         <div className="collapse collapse-arrow bg-base-200">
           <input type="radio" name="my-accordion-2" defaultChecked />
           <div className="collapse-title text-xl font-medium">
@@ -85,7 +85,7 @@ const Faq = () => {
       {/* clients sat form */}
       <div  className="text-center mt-20 text-2xl font-semibold jul">What our clients say</div>
         <hr className="mt-4 mb-20"/>
-      <div className="flex gap-4 w-2/3 mx-auto"  data-aos="flip-up">
+      <div className="flex mb-4 mx-auto flex-col lg:flex-row gap-4 w-2/3 md:mx-auto"  data-aos="flip-up">
         <Review
           title="Love the sleek design and top-notch quality! Your products have elevated our workspace, making it both stylish and functional. Highly recommended!"
           clientName="Kie Haverts"
