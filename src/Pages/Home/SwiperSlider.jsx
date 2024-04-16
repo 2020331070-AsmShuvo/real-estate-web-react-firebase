@@ -49,9 +49,9 @@ const SwiperSlider = () => {
         <SwiperSlide>
           <div
             id="slide2"
-            className="carousel-item relative w-full bg-[#171717]"
+            className="carousel-item relative w-full sm:h-[740px] md:h-auto bg-[#171717] flex flex-col md:flex-row"
           >
-            <img src={enhanced} className="z-10 py-10 ml-20 h-[740px]" />
+            <img src={enhanced} className="z-10 ml-20 w-56 lg:w-auto py-10 hidden sm:block  h-[740px]" />
 
             <div className="text-blue absolute bottom-0 bg-black w-full h-96"></div>
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -62,15 +62,15 @@ const SwiperSlider = () => {
                 ❯
               </a>
             </div>
-            <div className="mr-20 z-10 flex items-center justify-center px-20">
+            <div className="ml-20 mr-20 text-center md:text-start h-[740px] md:h-auto mx-auto z-10 flex items-center justify-center ">
               <div className="space-y-4 mt-6">
-                <h1 className="text-7xl text-gray-300 font-bold phil animate__animated animate__bounce">
+                <h1 className="lg:text-7xl text-gray-300 font-bold phil animate__animated animate__bounce">
                   Enhanced Living
                 </h1>
-                <h3 className="text-2xl text-gray-500 jul animate__animated animate__bounce">
+                <h3 className="md:text-2xl text-gray-500 jul animate__animated animate__bounce">
                   Experience with Reach
                 </h3>
-                <p className="text-gray-400 animate__animated animate__bounce">
+                <p className="text-gray-400  animate__animated animate__bounce">
                   Enhanced Living redefines luxury with unparalleled
                   sophistication and style, offering a lifestyle of opulence and
                   comfort. Our meticulously curated properties embody elegance
@@ -95,10 +95,10 @@ const SwiperSlider = () => {
               </a>
             </div>
             <div className="absolute top-3/4 mt-16 space-y-4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
-              <p className=" text-5xl text-center text-gray-300 font-extrabold phil">
+              <p className=" text-xl lg:text-5xl text-center text-gray-300 font-extrabold phil">
                 Exclusive Private Island Rentals
               </p>
-              <p className="text-sm text-center font-light">
+              <p className="text-sm hidden sm:block text-center font-light">
                 Escape to your own private paradise with our exquisite selection
                 of island retreats available for rent. Immerse yourself in
                 luxury and seclusion, where azure waters and pristine beaches
@@ -122,10 +122,10 @@ const SwiperSlider = () => {
               </a>
             </div>
             <div className="absolute top-3/4 mt-16 space-y-4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
-              <p className="phil text-5xl text-center text-gray-400 font-extrabold">
+              <p className="phil text-xl lg:text-5xl text-center text-gray-400 font-extrabold">
                 Exclusive Collection of Private Villas
               </p>
-              <p className="text-sm text-center font-light">
+              <p className="text-sm text-center hidden sm:block font-light">
                 Indulge in the epitome of luxury living with our exquisite
                 selection of private villas. Each villa boasts unparalleled
                 elegance and sophistication, offering a secluded haven where
@@ -149,10 +149,10 @@ const SwiperSlider = () => {
               </a>
             </div>
             <div className="absolute top-3/4 mt-16 space-y-4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
-              <p className="phil text-5xl text-center text-gray-400 font-extrabold">
+              <p className="phil text-xl lg:text-5xl text-center text-gray-400 font-extrabold">
                 Luxurious Penthouse Rentals
               </p>
-              <p className="text-sm text-center font-light">
+              <p className="text-sm hidden sm:block text-center font-light">
                 Indulge in the epitome of urban sophistication with our
                 prestigious penthouse rentals. Offering unparalleled views and
                 exquisite amenities, our penthouses redefine luxury living,
