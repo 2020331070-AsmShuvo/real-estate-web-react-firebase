@@ -32,6 +32,18 @@ const router = createBrowserRouter([
         element: <Register />,
       },
       {
+        path: "/about",
+        element: <Register />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
+      },
+      {
         path: "/jobs",
         element: (
           <PrivateRoutes>

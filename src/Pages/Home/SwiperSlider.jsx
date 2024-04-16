@@ -22,7 +22,7 @@ const SwiperSlider = () => {
         <SwiperSlide>
           <div id="slide1" className="carousel-item relative w-full">
             <img src={banner} className="w-full h-[740px]" />
-            <div className="banner-overlay absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+            <div className="banner-overlay absolute inset-0 bg-gradient-to-b from-[#894cd33c] to-[#070728c9]"></div>
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <a href="#slide5" className="btn btn-circle">
                 ❮
