@@ -35,7 +35,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li className="text-gray-600">
                 <NavLink to="/">Home</NavLink>
@@ -57,7 +57,7 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="flex flex-col md:flex-row items-center justify-center animate__animated animate__bounce ">
-            <img src={logo} className="w-10 md:w-16 ml-8" alt="" />
+            <img src={logo} className="w-10 md:w-16 ml-8 mx-auto" alt="" />
             <Link to="/" className="btn btn-ghost">
               <div className="flex flex-col justify-center items-start">
                 <p className="text-white text-sm md:text-xl jul">
@@ -92,7 +92,7 @@ const Navbar = () => {
           </ul>
         </div>
         {user ? (
-          <div className="navbar-end">
+          <div className="navbar-end flex flex-col gap-2">
             <p className="text-gray-500">
               {user.email ? user.email : user.displayName}
             </p>
@@ -106,7 +106,7 @@ const Navbar = () => {
             </div>
             <button
               onClick={logOut}
-              className=" border text-center py-2 font-semibold rounded-none md:w-36 text-[#a6886d] border-[#a6886d] "
+              className=" border text-center py-2 font-semibold rounded-none w-24 md:w-36 text-[#a6886d] border-[#a6886d] "
             >
               Logout
             </button>
@@ -115,13 +115,13 @@ const Navbar = () => {
           <div className="navbar-end gap-2">
             <Link
               to="/login"
-              className=" border text-center py-2 font-semibold rounded-none md:w-36 text-[#a6886d] border-[#a6886d] "
+              className=" border text-center py-2 font-semibold rounded-none w-20 md:w-36 text-[#a6886d] border-[#a6886d] "
             >
               Login
             </Link>
             <Link
               to="/register"
-              className=" border text-center py-2 font-semibold rounded-none md:w-36 text-[#a6886d] border-[#a6886d] "
+              className=" border text-center py-2 font-semibold rounded-none w-20 md:w-36 text-[#a6886d] border-[#a6886d] "
             >
               Register
             </Link>

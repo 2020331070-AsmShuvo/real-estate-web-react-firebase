@@ -19,7 +19,7 @@ const Estate = ({ estate }) => {
 
   return (
     <div className="p-2 m-2 mx-auto">
-      <div className="card  glass card-compact w-[400px] h-[700px] bg-gray-100 shadow-[#a6886d] shadow-2xl" data-aos="zoom-in">
+      <div className="card  glass card-compact md:w-[400px] h-[700px] bg-gray-100 shadow-[#a6886d] shadow-2xl" data-aos="zoom-in">
         <figure>
           <img src={image} className="p-6 w-full h-80" alt="card-images" />
         </figure>
@@ -40,7 +40,7 @@ const Estate = ({ estate }) => {
             <p className="text-red-700 font-semibold">For {status}</p>
           </div>
           <p className="text-blue-700 font-semibold">{price}</p>
-          <div className="card-actions justify-end">
+          <div className="w-full">
             <Link to={`/estate/${id}`}>
             <button className="btn btn-outline btn-success w-full flex items-center gap-2">
               View Property <FaArrowCircleRight />

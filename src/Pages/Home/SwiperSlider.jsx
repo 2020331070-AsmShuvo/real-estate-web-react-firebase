@@ -32,10 +32,10 @@ const SwiperSlider = () => {
               </a>
             </div>
             <div className="absolute top-1/2 space-y-4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
-              <p className="jul text-lg text-center text-gray-300 animate__animated animate__backInDown">
+              <p className="jul text-sm md:text-lg text-center text-gray-300 animate__animated animate__backInDown">
                 AGENCY AND CONTRACTOR
               </p>
-              <p className=" text-5xl text-center text-gray-300 font-extrabold  animate__animated animate__backInLeft">
+              <p className=" text-xl md:text-5xl text-center text-gray-300 font-extrabold  animate__animated animate__backInLeft">
                 Discover Your Dream Luxury Retreats
               </p>
               <p className="text-sm text-center font-light animate__animated animate__backInRight">
