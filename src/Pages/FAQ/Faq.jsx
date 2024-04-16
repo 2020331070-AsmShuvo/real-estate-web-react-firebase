@@ -7,7 +7,7 @@ const Faq = () => {
   return (
     <div className="lg:h-[1200px] px-2">
       <div className="my-10 space-y-2 lg:w-1/3 mx-auto">
-        <div><FaPersonCircleQuestion className="mx-auto text-7xl my-4 lg:animate__animated lg:animate__jello"/></div>
+        <div><FaPersonCircleQuestion className="mx-auto text-7xl my-4 animate__animated animate__jello"/></div>
         <div className="collapse collapse-arrow bg-base-200">
           <input type="radio" name="my-accordion-2" defaultChecked />
           <div className="collapse-title text-xl font-medium">
