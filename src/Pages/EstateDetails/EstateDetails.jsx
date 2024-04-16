@@ -39,15 +39,15 @@ const EstateDetails = () => {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      className="min-h-screen flex justify-center items-center"
+      className="min-h-screen flex flex-col lg:flex-row justify-center items-center gap-8"
     >
-      <div className="w-1/2">
+      <div className="lg:w-1/2 flex items-center justify-center ">
         <img
           src={image}
-          className="w-[600px] bg-[#ffffff20] rounded-lg ml-4 h-[500px] p-4 "
+          className="w-80 md:w-2/3 lg:w-[600px] bg-[#ffffff20] rounded-lg lg:ml-4 lg:h-[500px] p-4 "
         />
       </div>
-      <div className="w-1/2 mr-4 text-gray-50 space-y-3 bg-[#6c2c2c76] h-[500px] p-4 rounded-md">
+      <div className=" w-80 md:w-2/3 lg:w-1/2 lg:mr-4 text-gray-50 space-y-3 bg-[#6c2c2c76] lg:h-[500px] p-4 rounded-md">
         <p className="text-3xl font-bold text-gray-300 phil my-3 border-b">
           {estate_title}
         </p>
