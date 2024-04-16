@@ -21,6 +21,7 @@ const Login = () => {
       .then((res) => {
         console.log("Loged in user: ", res.user);
         alert("Login Successful!");
+        location.reload();
       })
       .catch((err) => {
         console.log("ERROR IN LOGIN: ", err.message);
@@ -34,6 +35,7 @@ const Login = () => {
       .then((res) => {
         console.log("Google user: ", res.user);
         alert("Login with google successfull");
+        location.reload();
       })
       .catch((err) => {
         console.log("google error: ", err.message);
@@ -46,6 +48,7 @@ const Login = () => {
       .then((res) => {
         console.log("github user: ", res.user);
         alert("Login with github successfull");
+        location.reload();
       })
       .catch((err) => {
         console.log("github error: ", err.message);

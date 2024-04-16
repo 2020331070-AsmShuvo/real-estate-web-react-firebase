@@ -58,6 +58,7 @@ const Register = () => {
           .then(() => {
             console.log("profile updated");
             console.log("Created User: ", user);
+            window.location.reload();
           })
           .catch((err) => {
             console.log("error while adding name and photoURL : ", err.message);
@@ -65,7 +66,7 @@ const Register = () => {
       })
       .then(() => {
         alert("REGISTRATION SUCCESSFUL !");
-        location.reload();
+        window.location.reload();
       })
       .catch((err) => {
         console.log("ERROR!!! ", err);

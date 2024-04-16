@@ -38,7 +38,8 @@ const UpdateProfile = () => {
           setUpdatedName("");
           setUpdatedPhoto("");
           console.log("Profile Updated user:", user);
-          alert("prodile updated Succesfuly");
+          alert("profile updated Succesfuly");
+          window.location.reload();
         })
         .catch((err) =>
           console.log("Error while updating profile: ", err.message)
