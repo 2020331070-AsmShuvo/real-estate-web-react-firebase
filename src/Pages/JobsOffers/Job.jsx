@@ -9,7 +9,7 @@ const Job = ({ job }) => {
 
   return (
     <div className="mx-auto">
-      <div  data-aos="zoom-in" className=" card mx-auto my-8 md:w-[900px] border rounded-none">
+      <div  data-aos="zoom-in" className=" card mx-auto my-8 lg:w-[900px] border rounded-none">
         <div className="card-body">
           <div className="flex items-center gap-4">
             <img src={joblogo} className="w-20" />
@@ -24,7 +24,7 @@ const Job = ({ job }) => {
             <div className="flex gap-4">
               <div className="">
                 <div className="flex items-center font-semibold gap-2">
-                  <BiSolidBadgeDollar className="text-2xl text-success" />{" "}
+                  <BiSolidBadgeDollar className="md:text-2xl text-success" />{" "}
                   {salary} <span className="font-light mr-4">/yr</span>
                 </div>
               </div>
@@ -36,7 +36,7 @@ const Job = ({ job }) => {
                 </div>
               </div>
             </div>
-            <button className="btn text-success btn-outline outline-none border-none text-3xl w-24 rounded-none ">
+            <button className="btn text-success mx-auto btn-outline outline-none border-none text-3xl w-24 rounded-none ">
               <FaArrowAltCircleRight />
             </button>
           </div>
