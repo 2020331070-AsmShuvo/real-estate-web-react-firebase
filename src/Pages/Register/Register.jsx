@@ -65,6 +65,7 @@ const Register = () => {
       })
       .then(() => {
         alert("REGISTRATION SUCCESSFUL !");
+        location.reload();
       })
       .catch((err) => {
         console.log("ERROR!!! ", err);
@@ -175,7 +176,6 @@ const Register = () => {
                       placeholder="Confirm password"
                       className="input w-full input-bordered bg-gray-600 "
                       name="confirmPassword"
-                      onChange={handleInput}
                       type={showPass ? "text" : "password"}
                       required
                     />
