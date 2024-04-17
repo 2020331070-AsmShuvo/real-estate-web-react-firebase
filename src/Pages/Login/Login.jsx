@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import loginbg from "../../../public/loginbg.jpg";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
@@ -6,10 +6,12 @@ import { FaGoogle, FaGithub } from "react-icons/fa";
 
 const Login = () => {
   const { signIn, googleLogin, githubLogin } = useContext(AuthContext);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
-  useEffect(()=>{
+  useEffect(() => {
     document.title = "Majestic Mansion | Login"
-  },[]);
+  }, []);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -20,12 +22,15 @@ const Login = () => {
     signIn(email, password)
       .then((res) => {
         console.log("Loged in user: ", res.user);
-        alert("Login Successful!");
+        setSuccessMessage("Login successful!");
+        setTimeout(() => {
+          setSuccessMessage("");
+        }, 2000);
         location.reload();
       })
       .catch((err) => {
         console.log("ERROR IN LOGIN: ", err.message);
-        alert("LOGIN FAILED. RECHECK EMAIL AND PASSWORD");
+        setErrorMessage("Login failed. Recheck email and password");
         return;
       });
   };
@@ -34,25 +39,32 @@ const Login = () => {
     googleLogin()
       .then((res) => {
         console.log("Google user: ", res.user);
-        alert("Login with google successfull");
+        setSuccessMessage("Login with Google successful!");
+        setTimeout(() => {
+          setSuccessMessage("");
+        }, 2000);
         location.reload();
       })
       .catch((err) => {
-        console.log("google error: ", err.message);
-        alert("Google login failed");
+        console.log("Google error: ", err.message);
+        setErrorMessage("Google login failed");
         return;
       });
   };
+
   const handleGithubLogin = () => {
     githubLogin()
       .then((res) => {
-        console.log("github user: ", res.user);
-        alert("Login with github successfull");
+        console.log("Github user: ", res.user);
+        setSuccessMessage("Login with Github successful!");
+        setTimeout(() => {
+          setSuccessMessage("");
+        }, 2000);
         location.reload();
       })
       .catch((err) => {
-        console.log("github error: ", err.message);
-        alert("Github login failed");
+        console.log("Github error: ", err.message);
+        setErrorMessage("Github login failed");
         return;
       });
   };
@@ -74,6 +86,20 @@ const Login = () => {
               onSubmit={handleLogin}
               className="card-body bg-gradient-to-r from-[#16100B] to-[#130C08]"
             >
+              {/* Display error message if there's any */}
+              {errorMessage && (
+                <div role="alert" className="alert alert-error">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                  <span>{errorMessage}</span>
+                </div>
+              )}
+              {/* Display success message if there's any */}
+              {successMessage && (
+                <div role="alert" className="alert alert-success">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
+                  <span>{successMessage}</span>
+                </div>
+              )}
               <div className="form-control">
                 <label className="label">
                   <span className="text-[#a6886d] font-semibold label-text">

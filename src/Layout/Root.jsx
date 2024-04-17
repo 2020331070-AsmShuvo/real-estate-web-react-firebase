@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {Outlet} from "react-router-dom";
 import Navbar from '../Shared/Navbar/Navbar';
 import Footer from '../Shared/Footer/Footer';
 const Root = () => {
     return (
         <div>
-            <Navbar/>
+            <Navbar />
             <Outlet/>
             <Footer/>
         </div>

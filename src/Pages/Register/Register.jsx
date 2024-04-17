@@ -10,6 +10,8 @@ const Register = () => {
   const { createUser, user } = useContext(AuthContext);
   const [passdata, setPassdata] = useState("");
   const [showPass, setShowPass] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleInput = (e) => {
     setPassdata(e.target.value);
@@ -34,15 +36,15 @@ const Register = () => {
 
     console.log(name, email, password, confirmPassword, photo);
     if (password.length < 6) {
-      alert("Password should contain at least 6 character");
+      setErrorMessage("Password should contain at least 6 characters");
       return;
     }
     if (!/^(?=.*[a-z])(?=.*[A-Z]).{6,}$/.test(password)) {
-      alert("Must have an Uppercase a Lowercase letter ");
+      setErrorMessage("Must have an Uppercase and a Lowercase letter");
       return;
     }
-    if (password != confirmPassword) {
-      alert("Passwords don't match");
+    if (password !== confirmPassword) {
+      setErrorMessage("Passwords don't match");
       return;
     }
 
@@ -50,6 +52,7 @@ const Register = () => {
     createUser(email, password)
       .then((res) => {
         const user = res.user;
+        console.log("get user: ", user);
         // update displayname and photoURL
         updateProfile(user, {
           displayName: name,
@@ -58,19 +61,19 @@ const Register = () => {
           .then(() => {
             console.log("profile updated");
             console.log("Created User: ", user);
-            window.location.reload();
+            setSuccessMessage("Registration successful!");
+            setErrorMessage("");
+            setTimeout(() => {
+              setSuccessMessage("");
+            }, 2000);
           })
           .catch((err) => {
             console.log("error while adding name and photoURL : ", err.message);
           });
       })
-      .then(() => {
-        alert("REGISTRATION SUCCESSFUL !");
-        window.location.reload();
-      })
       .catch((err) => {
         console.log("ERROR!!! ", err);
-        alert(err.message);
+        setErrorMessage("Registration Unsuccessful. Your email may already in use");
         return;
       });
   };
@@ -96,6 +99,20 @@ const Register = () => {
               onSubmit={handleRegister}
               className="card-body bg-gradient-to-r from-[#101B2F] to-[#190606]"
             >
+              {/* Display error message if there's any */}
+              {errorMessage && (
+                <div role="alert" className="alert alert-warning">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                  <span>{errorMessage}</span>
+                </div>
+              )}
+              {/* Display success message if registration is successful */}
+              {successMessage && (
+                <div role="alert" className="alert alert-success">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
+                  <span>{successMessage}</span>
+                </div>
+              )}
               <div className="flex flex-col lg:flex-row justify-between">
                 <div className="form-control  md:w-full">
                   <label className="label">

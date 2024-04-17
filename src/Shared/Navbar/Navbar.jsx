@@ -6,10 +6,12 @@ import { AuthContext } from "../../Providers/AuthProvider";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const [curUser, setCurUser] = useState(user);
+
   useEffect(() => {
     setCurUser(user);
   }, [user]);
-  // console.log(user);
+  console.log("User in navbar :",user);
+  console.log("cur User in navbar :",curUser);
   // console.log("User photo in navbar: ", user?.photoURL);
 
   return (
@@ -101,7 +103,7 @@ const Navbar = () => {
                 className="w-12 mx-2 rounded-full"
                 title={`${user.displayName}`}
               >
-                <img src={user?.photoURL} alt="user-avatar" />
+                <img src={curUser?.photoURL} />
               </div>
             </div>
             <button
