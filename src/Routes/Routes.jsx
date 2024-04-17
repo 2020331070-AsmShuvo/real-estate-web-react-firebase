@@ -11,6 +11,9 @@ import UpdateProfile from "../Pages/Login/Profile/UpdateProfile";
 import UserProfile from "../Pages/Login/Profile/UserProfile";
 import JobOffers from "../Pages/JobsOffers/JobOffers";
 import Faq from "../Pages/FAQ/Faq";
+import AboutUs from './../Pages/About/AboutUs';
+import ContactUs from './../Pages/Contact/ContactUs';
+import Services from "../Pages/Services/Services";
 
 const router = createBrowserRouter([
   {
@@ -28,20 +31,20 @@ const router = createBrowserRouter([
         element: <Login />,
       },
       {
-        path: "/register",
-        element: <Register />,
-      },
-      {
         path: "/about",
-        element: <Register />,
+        element: <AboutUs />,
       },
       {
         path: "/register",
         element: <Register />,
       },
       {
-        path: "/register",
-        element: <Register />,
+        path: "/contact",
+        element: <ContactUs />,
+      },
+      {
+        path: "/services",
+        element: <Services />,
       },
       {
         path: "/jobs",
