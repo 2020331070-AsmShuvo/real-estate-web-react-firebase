@@ -167,7 +167,7 @@ const Login = () => {
               <p className="hidden sm:block">Google Login</p>
             </button>
             <button 
-            onClick={handleGithubLogin}
+            onClick={handleGithubLogin}l
             className="flex items-center justify-center gap-2 font-semibold  bg-gray-50 w-1/2 rounded-full px-2 py-1">
               <FaGithub />
               <p className="hidden sm:block">Github Login</p>

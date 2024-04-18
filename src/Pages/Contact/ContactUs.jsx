@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ContactCard from "./ContactCard";
 import { FaRocketchat } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
@@ -6,6 +6,9 @@ import { CiLocationOn } from "react-icons/ci";
 import { IoIosCall } from "react-icons/io";
 
 const ContactUs = () => {
+  useEffect(() => {
+    document.title = "Majestic Mansion | Contact Us";
+  }, []);
   return (
     <div className="min-h-screen flex justify-center ">
       <div className="my-4 mt-20">

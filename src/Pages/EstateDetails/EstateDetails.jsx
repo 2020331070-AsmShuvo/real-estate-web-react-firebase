@@ -1,5 +1,11 @@
 import React, { useEffect } from "react";
 import { useParams, useLoaderData } from "react-router-dom";
+import { LuSquareDot } from "react-icons/lu";
+import { FaLocationArrow } from "react-icons/fa";
+import { IoIosAlert } from "react-icons/io";
+
+
+
 
 const EstateDetails = () => {
   const { id } = useParams();
@@ -56,12 +62,13 @@ const EstateDetails = () => {
         </p>
         <p className="text-md text-gray-300 ">{description}</p>
         <p className="text-3xl text-blue-500">{price}</p>
-        <p className="text-lg text-primary">For {status}</p>
+        <p className="text-lg text-primary flex items-center gap-2 my-1"><IoIosAlert /> For {status}</p>
         <p className="text-lg text-amber-400">Area: {area}</p>
-        <p className="text-rose-300">{location}</p>
+        <p className="text-rose-300 flex items-center gap-2 my-1"><FaLocationArrow />{location}</p>
         <p className="text-sm">
           {facilities.map((it) => (
-            <p className="text-info">* {it}</p>
+            <p className="text-info flex items-center gap-2 my-1"><LuSquareDot />
+            {it}</p>
           ))}
         </p>
       </div>

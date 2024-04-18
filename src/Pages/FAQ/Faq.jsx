@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Review from "../../Review/Review";
 import { FaPersonCircleQuestion } from "react-icons/fa6";
 
 
 const Faq = () => {
+  useEffect(() => {
+    document.title = "Majestic Mansion | FAQ";
+  }, []);
   return (
     <div className="lg:h-[1200px] px-2">
       <div className="my-10 space-y-2 lg:w-1/3 mx-auto">
