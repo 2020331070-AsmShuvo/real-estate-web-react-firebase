@@ -74,20 +74,20 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            <li className="text-white">
+            <li className="text-white opacity-80">
               <NavLink to="/">Home</NavLink>
             </li>
-            <li className="text-white">
+            <li className="text-white opacity-80">
               <NavLink to="/faq">FAQ</NavLink>
             </li>
-            <li className="text-white">
+            <li className="text-white opacity-80">
               <NavLink to="/jobs">Job Offers</NavLink>
             </li>
-            <li className="text-white">
+            <li className="text-white opacity-80">
               <NavLink to="/update">Update Profile</NavLink>
             </li>
             {user && (
-              <li className="text-white">
+              <li className="text-white opacity-80">
                 <NavLink to="/userprofile">User Profile</NavLink>
               </li>
             )}
